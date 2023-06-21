@@ -1,1 +1,5 @@
+<<<<<<< HEAD
 # SMP
+=======
+# FullServiceManagementPortal
+>>>>>>> master
