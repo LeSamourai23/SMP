@@ -10,8 +10,18 @@ const loginInput = ({ placeholder, secureTextEntry, isInvalid, onChangeText, val
       colors={['#1a62a4', '#4d85b8']}
       start={{ x: 0, y: 0 }}
       end={{ x: 1, y: 1 }}
-      style={{ height: 60, width: windowWidth - 50, borderRadius: 15, margin: 12, marginLeft: 24, marginRight: 24, justifyContent: 'center', alignItems: 'center', opacity: 1 }}>
-      <TextInput style={[styles.container, isInvalid && styles.inputInvalid]} placeholder={placeholder} placeholderTextColor='#d5dfeb' secureTextEntry={secureTextEntry} clearButtonMode='always' onChangeText={onChangeText} value={value} />
+      style={styles.mainContainer}>
+      <TextInput 
+        style={[styles.container, isInvalid && styles.inputInvalid]} 
+        placeholder={placeholder} 
+        autoCapitalize={'none'} 
+        placeholderTextColor='#d5dfeb' 
+        secureTextEntry={secureTextEntry} 
+        clearButtonMode='always' 
+        onChangeText={onChangeText} 
+        value={value}
+        inputMode={'email'} 
+        />
     </LinearGradient>
   )
 }
@@ -19,6 +29,18 @@ const loginInput = ({ placeholder, secureTextEntry, isInvalid, onChangeText, val
 export default loginInput
 
 const styles = StyleSheet.create({
+
+  mainContainer: {
+    height: 60, 
+    width: windowWidth - 50, 
+    borderRadius: 15, 
+    margin: 12, 
+    marginHorizontal: 24,
+    justifyContent: 'center', 
+    alignItems: 'center', 
+    opacity: 1 
+  },
+
   container: {
     //backgroundColor:'#6d8fba',
     opacity: 1,

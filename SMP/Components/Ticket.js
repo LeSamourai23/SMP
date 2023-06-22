@@ -53,6 +53,7 @@ const styles = StyleSheet.create({
       width: 6,
       height: 6,
     },
-    shadowColor:'#D6D8DC'
+    shadowColor:'#D6D8DC',
+    elevation:20
   },
 })

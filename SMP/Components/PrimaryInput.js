@@ -28,7 +28,8 @@ const styles = StyleSheet.create({
         marginHorizontal:24,
         justifyContent:'center',
         alignItems:'center',
-        fontSize:18
+        fontSize:18,
+        zIndex:0
       },
 
     inputInvalid:{

@@ -179,7 +179,8 @@ const ManpowerManagement = ({ navigation }) => {
               borderWidth: 0,
               width: width - 50,
               marginTop: 13,
-              alignSelf: 'center'
+              alignSelf: 'center',
+              zIndex:1
             }}
 
             setItems={setItems}
@@ -234,7 +235,7 @@ const ManpowerManagement = ({ navigation }) => {
                 backgroundColor: 'white',
                 flexDirection: 'row',
                 height: 130,
-                width: width / 1.05,
+                width: width-10,
                 borderRadius: 20,
                 shadowOpacity: 1,
                 shadowRadius: 6,
@@ -242,7 +243,8 @@ const ManpowerManagement = ({ navigation }) => {
                   width: 6,
                   height: 6,
                 },
-                shadowColor: '#D6D8DC'
+                shadowColor: '#D6D8DC',
+                elevation:20
               }}
               style={{ marginVertical: 0 }}
               rightWidth={90}
@@ -258,6 +260,7 @@ const ManpowerManagement = ({ navigation }) => {
                     paddingHorizontal: 0,
                     marginVertical: 10,
                     marginHorizontal: 0,
+                    
                   }}
                   type="clear"
                   icon={{ name: 'trash', type: 'ionicon', size: 30 }}

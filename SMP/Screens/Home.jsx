@@ -64,7 +64,7 @@ const Home = ({ navigation }) => {
 
   return (
     <SafeAreaView style={styles.mainContainer}>
-      <StatusBar translucent barStyle='dark-content' />
+      <StatusBar hidden={Platform.OS === "android" ? true: false} translucent barStyle='dark-content' />
       <LinearGradient
         start={{ x: 0, y: 0 }}
         end={{ x: 1, y: -1 }}
@@ -76,13 +76,13 @@ const Home = ({ navigation }) => {
           <TouchableOpacity onPress={toggleBottomSheet}>
             <Icon name="person-circle" type="ionicon" size={35} />
             <BottomSheet isVisible={isVisible} onBackdropPress={() => setIsVisible(false)}>
-              <View style={{ backgroundColor: COLORS.PRIMARY_BG, height: height / 2, borderRadius: 20 }}>
+              <View style={{ backgroundColor: COLORS.PRIMARY_BG, height: height / 2, borderRadius: 20, borderBottomLeftRadius:0, borderBottomRightRadius:0  }}>
 
                 <TouchableOpacity style={{ alignSelf: 'flex-start', margin: 5 }} onPress={() => setIsVisible(false)}>
                   <Icon name="close" type="ionicon" size={40} />
                 </TouchableOpacity>
 
-                <View style={{ justifyContent: 'center', alignItems: 'center', marginTop: -20, alignSelf: 'center' }}>
+                <View style={{ justifyContent: 'center', alignItems: 'center', marginTop: -20, alignSelf: 'center', }}>
                   <Image source={ProfilePhoto} style={{ height: 120, width: 120, alignSelf: 'center', marginVertical: 20}} />
                   <Text style={{ fontSize: 20, marginTop: 15, fontWeight: 'bold' }}>{user.name}</Text>
                   <Text style={{ fontSize: 17, marginTop: 3 }}>{user.email}</Text>
@@ -102,7 +102,7 @@ const Home = ({ navigation }) => {
             width: width / 1.12, 
             alignSelf: 'center', 
             borderRadius: 20, 
-            opacity: 0.95, 
+            opacity: 1, 
             height: 70, 
           }}
           inputContainerStyle={{ backgroundColor: 'white',  }}
@@ -172,17 +172,17 @@ const styles = StyleSheet.create({
   mainContainer: {
     flex: 1,
     backgroundColor: COLORS.PRIMARY_BG,
-    paddingTop: Platform.OS === "android" ? StatusBar.currentHeight : 0
+    paddingTop: Platform.OS === "android" ? StatusBar.currentHeight+10 : 0
   },
 
   SearchBarContainer: {
     opacity: 1,
     height: height / 5,
-    width: width / 1.05,
+    width: width - 20,
     alignSelf: 'center',
     borderRadius: 20,
     overflow: 'hidden',
-
+    marginTop: Platform.OS === "android" ? -30: 0
   },
   /* 
       filterContainer:{
@@ -215,7 +215,8 @@ const styles = StyleSheet.create({
       width: 6,
       height: 6,
     },
-    shadowColor:'#D6D8DC'
+    shadowColor:'#D6D8DC',
+    elevation:10
   }
 
 })

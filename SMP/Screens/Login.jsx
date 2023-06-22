@@ -48,7 +48,7 @@ const Login = ({navigation}) => {
             <Image source={Logo} style={{width: width/1.65, height: height/4.95, marginTop:20}}/>
           </View>
           <View style={{marginBottom:height/12, alignItems:'center'}}>
-            <Text style={{fontWeight:500, opacity:1, fontSize:35, color:'#d5dfeb'}}>Sign In</Text>
+            <Text style={{fontWeight:500, opacity:1, fontSize:35, color:'#d5dfeb'}}>Agriculture</Text>
           </View>
           <View style={{alignItems:'center', marginBottom:height/7.5}}>
             <LoginInput placeholder="ID" secureTextEntry={false} value={email} onChangeText={setEmail}/>

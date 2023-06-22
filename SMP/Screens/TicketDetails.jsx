@@ -26,7 +26,7 @@ const TicketDetails = ({ navigation, route }) => {
                 centerComponent={{ text: 'Details', style: styles.header }}
                 backgroundColor="transparent"
             />
-            <ScrollView style={styles.ticketDetails} vertical showsVerticalScrollIndicator='false'>
+            <ScrollView style={styles.ticketDetails} vertical showsVerticalScrollIndicator={false}>
                 <View style={styles.detailsContainer}>
                     <LinearGradient
                         start={{ x: 0, y: 0 }}

@@ -2,9 +2,12 @@ import { createNativeStackNavigator } from '@react-navigation/native-stack';
 import Home from '../Screens/Home';
 import { getFocusedRouteNameFromRoute } from '@react-navigation/native';
 import React from 'react';
+import { Dimensions } from 'react-native';
 import TicketDetails from '../Screens/TicketDetails';
 
 const Stack = createNativeStackNavigator();
+
+const { width, height } = Dimensions.get('window');
 
 function InHomeNav({ navigation, route }) {
 
@@ -24,13 +27,10 @@ function InHomeNav({ navigation, route }) {
       navigation.setOptions({
         tabBarStyle: {
           position: 'absolute',
-          height: 83,
+          height: Platform.OS === "android" ? 70: 83,
           borderRadius: 0,
           color:'transparent',
           opacity: 1,
-          shadowColor: '#000',
-          shadowOffset: { width: 0, height: 3 },
-          shadowOpacity: 0.2,
           alignItems: 'center',
           justifyContent: 'center',
           backgroundColor: 'rgba(255,255,255,0.7)',
