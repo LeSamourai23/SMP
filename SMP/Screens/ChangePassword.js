@@ -97,7 +97,7 @@ const ChangePassword = ({navigation}) => {
   };
 
   return (
-    <View>
+    <View style={{backgroundColor:COLORS.PRIMARY_BG}}>
       <Header
         leftComponent={
           <View>

@@ -200,6 +200,7 @@ const styles = StyleSheet.create({
         width: 350,
         backgroundColor: '#92B2FD',
         margin: 5,
+        alignSelf:'center',
         borderRadius: 20,
         shadowOpacity: 1,
         shadowRadius: 6,
@@ -219,6 +220,7 @@ const styles = StyleSheet.create({
     detailsContainer2: {
         height: 300,
         width: 350,
+        alignSelf:'center',
         backgroundColor: '#AD7FFB',
         margin: 5,
         borderRadius: 20,

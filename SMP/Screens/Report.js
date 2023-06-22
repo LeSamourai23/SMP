@@ -4,6 +4,7 @@ import { Header, Input, Button } from '@rneui/themed';
 import { Icon } from '@rneui/base';
 import { LinearGradient } from 'expo-linear-gradient'
 import { COLORS } from '../Constants/constants';
+import PrimaryInput from '../Components/PrimaryInput';
 
 const Report = ({navigation}) => {
 
@@ -14,7 +15,7 @@ const Report = ({navigation}) => {
   };
 
   return (
-    <View>
+    <View style={{backgroundColor:COLORS.PRIMARY_BG}}>
       <Header
         leftComponent={
           <View>
@@ -27,7 +28,7 @@ const Report = ({navigation}) => {
         backgroundColor="transparent"
       />
       <View style={{marginTop:20}}>
-        <Input placeholder='Enter the bug' />
+        <Input placeholder='Enter the bug'/>
       </View>
       <Button
         buttonStyle={{ backgroundColor: 'black', borderRadius: 5, width: width/1.05, alignSelf:"center", height:50}}
